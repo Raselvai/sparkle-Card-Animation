@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Mulish", sans-serif;
+	box-sizing: border-box;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+a, a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+body {
+  background: #000000;
+}
+
+@property --gradient-angle {
+	syntax: "<angle>";
+	initial-value: 0turn;
+	inherits: false;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col_4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333333333333%;
+    flex: 0 0 33.33333333333333%;
+    max-width: 33.33333333333333%;
+}
+
+.card_wrapper {
+	padding: 80px 0;
+	text-align: center;
+}
+
+.container {
+    max-width: 1085px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.card_wrapper h1 {
+	font-size: 60px;
+	font-weight: 700;
+	padding-bottom: 30px;
+	color: #ffffff;
+}
+
+.mt_30 {
+	margin-top: 30px;
+}
+
+.card_wrapper .card_item {
+	height: 100%;
+	animation: 2s gradient-angle infinite linear;
+	border: 2px solid transparent;
+	background-image: linear-gradient(#000000, #55434b), conic-gradient(
+		from var(--gradient-angle), 
+		#4ca1af 0%, 
+		#c4e0e5 37%,
+		#4b79a1 30%,
+		#283e51 33%,
+		#834d9b 40%,
+		#d04ed6 50%,
+		#4da0b0 77%,
+		#d39d38 80%,
+		#6a3093 83%,
+		#a044ff 90%
+	);
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
+	padding: 60px 20px;
+	border-radius: 20px;
+	place-content: center;
+	place-items: center;
+	display: block;
+	transition: 0.4s all ease-in-out;
+}
+
+.card_wrapper .card_item:hover {
+	transform: scale(1.05);
+}
+
+.card_wrapper .card_item i {
+	font-size: 40px;
+}
+
+.card_wrapper .card_item h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.card_wrapper .card_item p {
+	text-align: left;
+	font-size: 13px;
+}
+
+@keyframes gradient-angle {
+	to {
+		--gradient-angle: 1turn;
+	}
+}
+
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1399px){
+	
+}
+@media (min-width: 1400px) { 
+	
+}
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) { 
+
+	
+
+}
+
+@media (max-width: 991px) {
+	.col_4 {
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 50%;
+	    flex: 0 0 50%;
+	    max-width: 50%;
+	}
+
+	.card_wrapper h1 {
+	    font-size: 40px;
+	}
+}
+
+/*Medium devices (tablets, 767px and down)*/
+@media (max-width: 767px) {
+		
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media (max-width: 575px) {
+	.col_4 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
